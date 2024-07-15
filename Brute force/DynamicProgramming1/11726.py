@@ -6,7 +6,8 @@ def build_block(n):
         return 1
     elif n == 2:
         return 2
-    
+    # 위의 if문이 없으면 RuntimeError, index에러가 난다. 
+    # 이를 물어보니 1,2를 넣었을때 밑에 있는 반복문에서 없는 index에 접근하기 때문이라고 한다.
     dp=[0]*(n+1)
     dp[1]=1
     dp[2]=2
